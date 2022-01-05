@@ -7,9 +7,12 @@ app = FastAPI()
 
 c_list= []
 
+print("Server is running :)")
+print(".....................")
+
 @app.get("/")
 async def root():
-    return {"message": "DotMail Api By DiyRex", "Usage":"host:port/dotmail/email"}
+    return {"message": "DotMail Api By DiyRex :)", "Usage":[{"Get_No_of_DotMails":"HOST:PORT/dotmail/[email]/[count]"},{"Get_All_DotMails": "HOST:PORT/dotmail/[email]/[count]"}]}
 
 @app.get("/dotmail/{keyword}")
 def dotmail(keyword):
